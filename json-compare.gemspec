@@ -8,15 +8,10 @@ Gem::Specification.new do |gem|
   gem.summary       = %q{JSON Comparer}
   gem.homepage      = "https://github.com/a2design-company/json-compare"
 
-  gem.files         = `git ls-files`.split($\)
+  gem.files         =['LICENSE','json-compare.gemspec','lib/json-compare.rb','lib/json-compare/comparer.rb','lib/json-compare/version.rb']
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
-  gem.test_files    = gem.files.grep(%r{^(test|spec|features)/})
   gem.name          = "json-compare"
   gem.require_paths = ["lib"]
   gem.version       = JsonCompare::VERSION
-
-  # tests
-  gem.add_development_dependency 'rake'
-  gem.add_development_dependency 'rspec', ">= 2.0.0"
-  gem.add_development_dependency 'yajl-ruby'
+  gem.licenses      = ['MIT']
 end
